@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          
+       #imgDiv{
+           width: 130px;
+           height: 80px;
+           margin: auto;
+           
+       }
+       #main{
+           width: 80%;
+           height: 500px;
+           /* border:1px solid black; */
+           margin:auto;
+       }
+       #p2{
+           margin-top: 40px;
+       }
+       #p1{
+           margin-top: -20px;
+       }
+       #container{
+           display: flex;
+           gap:40px;
+       }
+       #container>div{
+           width: 50%;
+           height: 100%;
+           /* border: 1px solid rgb(42, 6, 83); */
+       }
+  #input1{
+      width: 98%;
+      height: 50px;
+      margin-top: -12px;
+      font-size: 18px;
+  }
+  #input2{
+      width: 40%;
+      height: 50px;
+      font-size: 18px;
+  }
+  p{
+      margin-top: 25px;
+  }
+ #card{
+     width: 70%;
+ 
+     /* border: 1px solid black; */
+     display: flex;
+     gap:20px;
+ }
+ /* #card>div{
+     border: 1px solid red;
+   
+ } */
+ #card1{
+     width: 70%;
+     font-size: 20px;
+ }
+ #card2{
+     width: 30%;
+     font-size: 18px;
+ }
+ #cardIn{
+     width: 98%;
+     height: 30px;
+     font-size: 18px;
+ }
+ #cardIn2{
+     width: 98%;
+     height: 30px;
+     font-size: 18px;
+ }
+ #cardP{
+     font-weight: bold;
+     margin-bottom: 5px;
+ }
+#payDiv{
+    margin:8px 0 50px 260px;
+    width: 120px;
+    height: 30px;
+}
+#payBtn{
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    
+}
+    </style>
+</head>
+<body>
+    <div id="imgDiv"><img id="image" src="https://res.cloudinary.com/ssenseweb/image/upload/v1471963917/web/ssense_logo_v2.svg"></div>
+    <div id="main">
+        <p id="p1">CHECKOUT</p>
+        <p id="p2">SHIPPING ADDRESS</p>
+        <hr>
+     <div id="container">
+         <div>
+             <p >First Name</p>
+             <input id="input1" type="text">
+             <p>Street Address</p>
+             <input id="input1" type="text">
+             <P>City</P>
+             <input id="input1" type="text">
+             <p>Country/Region</p>
+             <select id="input2">
+            
+                 <option value="inida">India</option>
+                 <option value="">Nepal</option>
+                 <option value="">Afganistan</option>
+                 <option value="">China</option>
+                 <option value="">Shri lanka</option>
+                 <option value="">USA</option>
+                 <option value="">Bhutan</option>
+                 <option value="">Canada</option>
+                 <option value="">Turkey</option>
+                 
+             </select>
+             <P>Phone</P>
+             <input id="input2" type="text">
+         </div>
+         <div>
+            <p>Last Name</p>
+            <input id="input1" type="text">
+            <P>Company (Optional)</P>
+            <input id="input1" type="text">
+            <p>ZIP Or Postal Code</p>
+            <input id="input1" type="text">
+            <p> Province</p>
+            <select id="input2">
+                <option></option>
+                <option value="">Albarta</option>
+                <option value="">British Columbia</option>
+                <option value="">Manitoba</option>
+                <option value="">New Brunswik</option>
+            </select>
+         </div>
+
+     </div>
+     <hr>
+     <p>PAYMENT METHOD</p>
+     <hr>
+     <form>
+     <div>
+        <input type="radio" id="Choice1"
+         value="COD">
+         <label for="Choice1">COD</label>
+       
+          <input type="radio" id="Choice2"
+         value="Debit Card /Credit Card">
+        <label for="Choice2">Debit Card /Credit Card</label>
+      </div>
+  </form>
+   <p id="p2">CARD DETAILS</p>
+   <hr>
+   <div id="card">
+       <div id="card1">
+    <p id="cardP">Card number</p>
+    <input id="cardIn"  placeholder="  1234 1234 1234 1234 1234" type="text">
+    <p id="cardP">Cardholder’s name</p>
+    <input id="cardIn" type="text">
+       </div>
+       <div id="card2">
+           <p id="cardP" >Expiration date</p>
+           <input id="cardIn2" placeholder="MM/YY" type="text">
+           <p id="cardP">Security code</p>
+           <input id="cardIn2" placeholder="CVV" type="text">
+       </div>
+      
+    </div>
+    <hr>
+    <div id="payDiv"><button  onclick="window.location.href='otp.html'" id="payBtn">Pay</button></div>
+    
+    </div>
+</div>
+</div>
+</body>
+</html>

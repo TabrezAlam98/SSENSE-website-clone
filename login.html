@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          #nav{
+            width: 100%;
+            margin: auto;
+            height: 50px;
+            /* border:1px solid black; */
+            display: flex;
+            justify-content: space-between;
+            color: gray;
+            position: fixed;
+            margin-top: -60px;
+            background-color: white;
+            color: black;
+           
+        }
+      
+        #navDiv1{
+            display: flex;
+            justify-content: space-evenly;
+            width: 40%;
+            height: 100%;
+            /* border: 1px solid red; */
+            font-size: 14px;
+            align-items: center;
+            cursor: pointer;
+        }
+        #navDiv2{
+            width: 10%;
+            height: 100%;
+            /* border: 1px  solid red; */
+            margin-left: -120px;
+        }
+        /* #navDiv2Img{
+          margin-top: 10px;
+          
+        } */
+        #navDiv3{
+            display: flex;
+            justify-content: space-evenly;
+            width: 30%;
+            height: 100%;
+            /* border: 1px solid red; */
+            font-size: 14px;
+            align-items: center;
+            cursor: pointer;
+        }
+        #main{
+            width: 35%;
+            height: 400px;
+            border: 1px solid white;
+            margin: auto;
+            margin-top: 80px;
+        }
+        p{
+            margin-top: 40px;
+        }
+        input{
+            width: 98%;
+            height: 35px;
+            margin-top: -5px;
+            font-size: 18px;
+           
+        }
+        #submit{
+            width: 100%;
+            height: 45px;
+            margin-top: 20px;
+            color: white;
+            background-color: black;
+            border: 1px solid black;
+        }
+        #pDiv{
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: -25px;
+            
+        }
+        #para{
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="navDiv1">
+            <div onclick="window.location.href='index.html'">  MENSWEAR</div>
+            <div onclick="window.location.href='Womenswear.html'"> WOMENSWEAR</div>
+            <div>EVERYTHING ELSE</div>
+            <div>SALE</div>
+            <div>SEARCH</div>
+        </div>
+        <div id="navDiv2">
+            <img id="navDiv2Img" src="https://res.cloudinary.com/ssenseweb/image/upload/v1471963917/web/ssense_logo_v2.svg">
+        </div>
+        <div id="navDiv3">
+            <div>ENGLISH  </div>
+            <div >LOGIN</div>
+            <div>WISHLIST</div>
+            <div>SHOPPING BAG (0)</div>
+        </div>
+    </div>
+
+    <form id="form">
+    <div id="main">
+        <p>LOGIN </p>
+        <p>Email address</p>
+        <input id="email" type="email">
+        <p>Password</p>
+        <input type="password">
+        
+        <input id="submit" type="submit" value="CONTINUE">
+   
+    <div id="pDiv">
+        <p><u>Forgot your password?</u></p>
+        <p><u>Not your email?</u></p>
+    </div>
+</div>
+<p id="para"></p>
+</form>
+</body>
+</html>
+
+<script>
+    var regUser=JSON.parse(localStorage.getItem("signupDetails"))
+ //    console.log(regUser);
+    document.querySelector("#form").addEventListener("submit",formSubmit);
+    var form=document.querySelector("#form")
+    function formSubmit(event){
+        event.preventDefault();
+        var email=document.querySelector("#email").value;
+        console.log(email)
+        var user=form.email.value;
+    //  var pass=form.pass.value;
+         console.log(user)
+ 
+        for(var i=0; i<regUser.length; i++){
+          if(regUser[i].email==0){
+         document.querySelector("#para").innerText="Please Enter Your Username or Password";
+         
+        }
+           else  if(regUser[i].email==email ){
+            console.log("log in success");
+            document.querySelector("#para").innerText="Login successfull";
+            
+            alert("login successfull")
+            window.location.href="index.html";
+            break;
+            
+        }
+        
+        else{
+         //    console.log("log in fail")
+            document.querySelector("#para").innerText="Login Failed";
+         //   alert("login failed")
+            
+            
+        }
+        }
+        
+    }
+ </script>

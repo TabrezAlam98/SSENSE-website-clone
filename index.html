@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        #nav{
+            width: 100%;
+            margin: auto;
+            height: 50px;
+            /* border:1px solid black; */
+            display: flex;
+            justify-content: space-between;
+            color: gray;
+            position: fixed;
+            margin-top: -60px;
+            background-color: white;
+            color: black;
+           
+        }
+      
+        #navDiv1{
+            display: flex;
+            justify-content: space-evenly;
+            width: 40%;
+            height: 100%;
+            /* border: 1px solid red; */
+            font-size: 12px;
+            align-items: center;
+            cursor: pointer;
+        }
+        #navDiv2{
+            width: 10%;
+            height: 100%;
+            /* border: 1px  solid red; */
+            margin-left: -120px;
+        }
+        /* #navDiv2Img{
+          margin-top: 10px;
+          
+        } */
+        #navDiv3{
+            display: flex;
+            justify-content: space-evenly;
+            width: 30%;
+            height: 100%;
+            /* border: 1px solid red; */
+            font-size: 12px;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #container1{
+            width: 95%;
+            /* height: 500px; */
+            /* border: 1px solid red; */
+            margin: auto;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+        }
+        #container1>div{
+            width: 48%;
+           
+            /* border: 1px solid black; */
+           
+              
+        }
+        #imgDiv{
+            width: 100%;
+            height: 450px;
+            /* border: 1px solid red; */
+        }
+        #innerDiv{
+            width: 100%;
+            /* height: 20px; */
+            /* border: 1px solid green; */
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: -10px;
+            color: gray;
+        }
+       #p2{
+           /* margin-top: -10px; */
+           color: gray;
+           font-size: 20px;
+       }
+       #p3{
+           margin-top: -10px;
+           color: gray;
+           font-size: 20px;
+       }
+       img{
+           width: 100%;
+           height: 100%;
+       }
+
+
+       #container2{
+           width: 95%;
+           /* border: 1px solid red; */
+           margin: auto;
+           display: flex;
+          justify-content: space-between;
+          margin-top: 50px;
+       }
+       #container2>div{
+           width: 31%;
+           /* height: 600px; */
+          
+           /* border: 1ox solid black; */
+       }
+       #container2ImgDiv{
+           width: 100%;
+           height: 450px;
+           /* border: 1px solid red; */
+           display: flex;
+
+       }
+       #container2Innerdiv{
+           display: flex;
+           gap: 20px;
+          
+       }
+       #p4{
+           font-size: 20px;
+           color: gray;
+           margin-top: 13px;
+       }
+       #p5{
+           margin-top: -10px;
+           color: gray;
+       }
+       p{
+           color: gray;
+       }
+
+
+       #container3{
+           width: 95%;
+           margin: auto;
+           /* border: 1px solid red; */
+           display: flex;
+           margin-top: 50px;
+           justify-content: space-between;
+       }
+       #container3>div{
+           width:48%;
+          /* height: 500px; */
+           /* border: 1px solid black; */
+       }
+       #con3ImgDiv{
+           width: 100%;
+           height: 450px;
+           /* border:1px solid green; */
+           gap: 20px;
+       }
+       #shop{
+           border: 1px solid black;
+           padding: 15px;
+           width: 30%;
+         
+           text-align: center;
+           margin-top: -5px;
+           border-radius: 10px;
+           font-size: 15px;
+           align-items: center;
+       }
+
+       #container4{
+           margin-top: 70px;
+           width: 100%;
+           height: 150px;
+           /* border: 1px solid black; */
+           /* display: grid;
+           grid-template-columns: repeat(4,1fr);
+            */
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+       }
+       #container4>div{
+           width: 19%;
+           height: 100%;
+         border-bottom: 1px solid gray;
+         border-top: 1px solid gray;
+           gap:10px
+       }
+       #con4P1{
+           font-size: 40PX;
+           margin: 15px 0 0 10px;
+       }
+       #con4P2{
+           margin:10px 0 0 10px;
+       }
+       #con4Img{
+           width:90px;
+           height:85%;
+           margin-top: 10px;
+           
+       }
+       #con4Div2{
+           display: flex;
+       }
+       #con4P3{
+           margin-top: 50px;
+       }
+
+     #container7{
+         width: 100%;
+         /* border: 1px solid black; */
+         margin-top: 50px;
+     }
+     #con7p{
+         font-size: 100px;
+         width: 70%;
+         margin: auto;
+         text-align: center;
+     }
+     #con7p2{
+         font-size: 55px;
+         text-align: center;
+     }
+     #edit{
+         width: 200px;
+         padding: 15px;
+         border: 1px solid black;
+         margin: auto;
+         text-align: center;
+         border-radius: 10px;
+      
+     }
+#footer{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 150px;
+   
+}
+#foot2{
+    width: 75%;
+    margin: auto;
+}
+#foot3{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 10px;
+    margin:20px 0 30px 0; 
+    color: gray;
+   
+}
+#foot4{
+    width: 15%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: black;
+  
+}
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="navDiv1">
+            <div onclick="window.location.href='menswear.html'">  MENSWEAR</div>
+            <div onclick="window.location.href='Womenswear.html'"> WOMENSWEAR</div>
+            <div>EVERYTHING ELSE</div>
+            <div>SALE</div>
+            <div>SEARCH</div>
+        </div>
+        <div id="navDiv2">
+            <img id="navDiv2Img" src="https://res.cloudinary.com/ssenseweb/image/upload/v1471963917/web/ssense_logo_v2.svg">
+        </div>
+        <div id="navDiv3">
+            <div>ENGLISH  </div>
+            <div onclick="window.location.href='signup.html'">LOGIN</div>
+            <div>WISHLIST</div>
+            <div onclick="window.location.href='cart.html'">SHOPPING BAG (0)</div>
+        </div>
+    </div>
+
+
+    <div id="container1">
+        <div>
+            <div id="imgDiv">
+                <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1645025234/ypyiv4ztukkndqzti3mk.jpg" alt="">
+            </div>
+            <div id="innerDiv">
+                <p>Culture</p>
+                <p id="p2">THE SEAN BROWN REMIX</p>
+            </div>
+            <p id="p3">Designing A Dream Space with All the Right Rhythm</p>
+        </div>
+        <div >
+            <div id="imgDiv">
+                <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1644862462/ag2pynqb7i9ibwwxva4q.jpg">
+            </div>
+            <div id="innerDiv">
+                <p>Culture</p>
+                <p id="p2"> THE CAMERAS INSIDE MY HOUSE</p>
+            </div>
+            <p id="p3"> A To-Do List For Remaining Unseen</p>
+        </div>
+       
+        </div>
+    </div>
+
+
+
+ <div id="container2">
+     <div>
+         <div id="container2ImgDiv">
+             <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1644516442/n8hgqymjqqg3k2mxfcih.jpg" alt="">
+         </div>
+         
+         <div id="container2Innerdiv">
+            <div>
+             <p >RECENT</p>
+         </div>
+         <div>
+             <p id="p4">ME-TIME ESSENTIALS</p>
+             <p id="p5">MaRket | Feb 14</p>
+         </div>
+        </div>
+     </div>
+     <div>
+        <div id="container2ImgDiv">
+            <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1644362998/l7pjdy3ib1p8a0skm83d.jpg" alt="">
+        </div>
+        
+        <div id="container2Innerdiv">
+           <div>
+            <p >RECENT</p>
+        </div>
+        <div>
+            <p id="p4">WHEN THE TOWER FALLS: REDISIGNING A LIFE THROUGH TAROT
+            </p>
+            <p id="p5">Culture | Feb 11</p>
+        </div>
+       </div>
+     </div>
+     <div>
+        <div>
+            <div id="container2ImgDiv">
+                <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1644252200/buf3t8mb8ntcpq1wr9sv.jpg" alt="">
+            </div>
+            
+            <div id="container2Innerdiv">
+               <div>
+                <p >RECENT</p>
+            </div>
+            <div>
+                <p id="p4">MADE IN VAIN: A TOXONOMY OF LIFE - OPENING BEAUTY  DESIGN
+                </p>
+                <p id="p5">Culture | Feb 9</p>
+            </div>
+           </div>
+         </div>
+     </div>
+ </div>
+
+
+<div id="container3">
+    <div>
+        <div id="con3ImgDiv">
+            <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1645023072/qu5ojet348r0maik8den.jpg" alt="">
+        </div>
+        <div id="container2Innerdiv">
+          <P>Featured </P>
+           <P id="p4">MONCLER</P>
+          
+     </div>
+     <div id="shop">SHOP MENSWEAR</div>
+    </div>
+   
+
+
+    <div>
+        <div id="con3ImgDiv">
+            <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1645023074/p2zxtsqvyqj7ycwzpvbm.jpg">
+        </div>
+        <div id="container2Innerdiv">
+           <div><P>Featured </P></div>
+           <div><P id="p4">MONCLER</P></div>
+        </div>
+    <div id="shop">SHOP WOMENSWEAR</div>
+    </div>
+   
+</div>
+
+<div id="container4">
+    <div id="con4Div1">
+        <p id="con4P1">CHASING LIGHT</p>
+        <p id="con4P2">VIEW ALL STORIES</p>
+    </div>
+    <div id="con4Div2">
+        <div>
+            <img id="con4Img" src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1630507757/bafd1fcaut0u92pqn0pj.jpg" alt="">
+        </div>
+        <div>
+            <p>OUT IN THE STREET WITH JOEL MEYEROWITZ</p>
+            <p id="con4P3">Art</p>
+        </div>
+    </div>
+    <div id="con4Div2">
+        <div>
+            <img id="con4Img" src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1619540298/uyfv6bmzj8vgpvwjhsou.jpg" alt="">
+        </div>
+        <div>
+            <p>ON HOW TO BE IN PUBLIC :THE WORLD</p>
+            <p id="con4P3">Culture</p>
+        </div>
+    </div>
+    <div id="con4Div2">
+        <div>
+            <img id="con4Img" src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1604004180/arvpz3ehjyn7jlum4o93.jpg" alt="">
+        </div>
+        <div>
+            <p>NAIMA GREEN IS IN PERSUIT OF THE CLOSE PORTRAITE</p>
+            <p id="con4P3">Art</p>
+        </div>
+    </div>
+    <div id="con4Div2">
+        <div>
+            <img id="con4Img" src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1594413654/uoszh4w3nksemg3p3ehx.jpg" alt="">
+        </div>
+        <div>
+            <p>THE HOUSE OF MUSE </p>
+            <p id="con4P3">Fashion</p>
+        </div>
+    </div>
+</div>
+
+<!-- container5 -->
+<div id="container1">
+    <div>
+        <div id="imgDiv">
+            <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1591098045/rmku32i48ohhvrds1w3j.jpg" alt="">
+        </div>
+        <div id="innerDiv">
+            <p>Culture</p>
+            <p id="p2">BLACK LIVES MATTER: A WORKING RESOURCE FOR MOBILIZING</p>
+        </div>
+    </div>
+    <div >
+        <div id="imgDiv">
+            <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1643918998/mtvmbkbpnmhu71b7ahme.jpg">
+        </div>
+        <div id="innerDiv">
+            <p>Fashion</p>
+            <p id="p2"> PULL WOOL OVER MY EYES</p>
+        </div>
+        <p id="p3"> An Ode To The Balaclava, Winter’s Most Melodramatic Accessory</p>
+    </div>
+   
+    </div>
+</div>
+
+<!-- container 6 -->
+<div id="container3">
+    <div>
+        <div id="con3ImgDiv">
+            <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1645456001/s0gu62qpomkzoj1z6ggu.jpg" alt="">
+        </div>
+        <div id="container2Innerdiv">
+          <P>Featured </P>
+           <P id="p4">ADIDAS X WALES BONNER</P>
+          
+     </div>
+     <div id="shop">SHOP MENSWEAR</div>
+    </div>
+   
+
+
+    <div>
+        <div id="con3ImgDiv">
+            <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1645456032/gcfjltqtsodvtlrzrsw3.jpg">
+        </div>
+        <div id="container2Innerdiv">
+           <div><P>Featured </P></div>
+           <div><P id="p4">ADIDAS X WALES BONNER</P></div>
+        </div>
+    <div id="shop">SHOP WOMENSWEAR</div>
+    </div>
+   
+</div>
+  <!-- container 7 -->
+<div id="container7">
+    <p id="con7p">The Oral History of Apartamento</p>
+    <p id="con7p2">THE INSIDE STORY OF EVERYONE’S FAVORITE INTERIORS MAGAZINE</p>
+    <div id="edit">VIEW EDITORIAL</div>
+</div>
+<!-- container 8 -->
+<div id="container2">
+    <div>
+        <div id="container2ImgDiv">
+            <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1643047790/l1qxhbkqmk7j3zrx26tb.jpg" alt="">
+        </div>
+        
+        <div id="container2Innerdiv">
+           <div>
+            <p >RECENT</p>
+        </div>
+        <div>
+            <p id="p4">FRESH SNOW, FRESH FACE! </p>
+            <p id="p5"> Fashion Jan 26</p>
+        </div>
+       </div>
+    </div>
+    <div>
+       <div id="container2ImgDiv">
+           <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1642175441/ibezpp5orbak1tpieffv.jpg" alt="">
+       </div>
+       
+       <div id="container2Innerdiv">
+          <div>
+           <p >RECENT</p>
+       </div>
+       <div>
+           <p id="p4">INT. MORNING: WE SEE A CHARACTER DEVELOP </p>
+           <p id="p5">  Culture Jan 18</p>
+       </div>
+      </div>
+    </div>
+    <div>
+       <div>
+           <div id="container2ImgDiv">
+               <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1641839958/oks77kv3djnbjvfserxc.jpg" alt="">
+           </div>
+           
+           <div id="container2Innerdiv">
+              <div>
+               <p >RECENT</p>
+           </div>
+           <div>
+               <p id="p4">HOME AWAY FROM HOME: THE LOVE LANGUAGE OF SOUVENIRS</p>
+               <p id="p5"> Fashion Jan 13</p>
+           </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<!-- container 9 -->
+<div id="container4">
+    <div id="con4Div1">
+        <p id="con4P1">CONSIDER THIS</p>
+        <p id="con4P2">VIEW ALL STORIES</p>
+    </div>
+    <div id="con4Div2">
+        <div>
+            <img id="con4Img" src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1600876820/ok4to9doypwylhsoq1lo.jpg" alt="">
+        </div>
+        <div>
+            <p>THE REMAINS OF THE HEYDAY:ARE SUBCULTURES</p>
+            <p id="con4P3">Culture<p>
+        </div>
+    </div>
+    <div id="con4Div2">
+        <div>
+            <img id="con4Img" src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1606866817/edce3snwauq79kubdiur.jpg" alt="">
+        </div>
+        <div>
+            <p>DECONSTRUCTING THE INSTAGRAM AESTHETIC</p>
+            <p id="con4P3">Culture</p>
+        </div>
+    </div>
+    <div id="con4Div2">
+        <div>
+            <img id="con4Img" src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1625232137/wy35fpvlk9oju2oaqfio.jpg" alt="">
+        </div>
+        <div>
+            <p>THE SPIRAL WALKS A VERY THIN LINE FASHION</p>
+            <p id="con4P3">Fashion</p>
+        </div>
+    </div>
+    <div id="con4Div2">
+        <div>
+            <img id="con4Img" src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1618511656/x1nq39rzrge3jqjpt3lu.jpg" alt="">
+        </div>
+        <div>
+            <p>DENIM MONOGAMIST </p>
+            <p id="con4P3">Fashion</p>
+        </div>
+    </div>
+</div>
+
+<div id="container2">
+    <div>
+        <div id="container2ImgDiv">
+            <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1641487445/d1duebjheyy3z5u4thpq.jpg" alt="">
+        </div>
+        
+        <div id="container2Innerdiv">
+           <div>
+            <p >RECENT</p>
+        </div>
+        <div>
+            <p id="p4">TURN YOUR BEST FACE FORWARD</p>
+            <p id="p5">Market Jan 10</p>
+        </div>
+       </div>
+    </div>
+    <div>
+       <div id="container2ImgDiv">
+           <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1640203419/nyzxkf3mjilkzjkgmmw3.jpg" alt="">
+       </div>
+       
+       <div id="container2Innerdiv">
+          <div>
+           <p >RECENT</p>
+       </div>
+       <div>
+           <p id="p4">THE SSENSE 2021 YEAR IN REVIEW</p>
+           <p id="p5">   Culture Dec 28 </p>
+       </div>
+      </div>
+    </div>
+    <div>
+       <div>
+           <div id="container2ImgDiv">
+               <img src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1640193313/n1zwoktbizq9uduy8seu.jpg" alt="">
+           </div>
+           
+           <div id="container2Innerdiv">
+              <div>
+               <p >RECENT</p>
+           </div>
+           <div>
+               <p id="p4">FACE TO FACE: INTRODUCING MAKEUP</p>
+               <p id="p5">  Market Dec 27</p>
+           </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- footer -->
+<div id="footer">
+<div>COUNTRY/REGION:INDIA</div>
+<div>NEWSLETTER SIGNUP</div>
+<div>CUSTOMER CARE</div>
+<div>LOCATION</div>
+<div>EDITORIAL ARCHIVE</div>
+<div>CAREER</div>
+<div>AFFILIATE</div>
+<div>SITEMAP</div>
+</div>
+<div id="foot2">
+    <div id="foot3">
+    <div>© 2022 ssense.com</div>
+    <div>Terms & Conditions</div>
+    <div>Privacy Policy </div>
+    <div>Cookies </div>
+    <div>Accessibility</div>
+    <div id="foot4">
+        <div> <i class="fab fa-facebook icon-color"></i></div>
+        <div> <i class="fab fa-linkedin icon-color" ></i></div>
+        <div><i class="fab fa-instagram-square icon-color"></i></div>
+        <div> <i class="fab fa-youtube icon-color"></i></div>
+    </div>
+    
+</div>
+</div>
+</body>
+</html>

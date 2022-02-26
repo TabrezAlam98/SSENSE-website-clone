@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        #nav{
+            width: 100%;
+            margin: auto;
+            height: 50px;
+            /* border:1px solid black; */
+            display: flex;
+            justify-content: space-between;
+            color: gray;
+            position: fixed;
+            margin-top: -60px;
+            background-color: white;
+            color: black;
+            
+        }
+      
+        #navDiv1{
+            display: flex;
+            justify-content: space-evenly;
+            width: 40%;
+            height: 100%;
+            /* border: 1px solid red; */
+            font-size: 14px;
+            align-items: center;
+        }
+        #navDiv2{
+            width: 10%;
+            height: 100%;
+            /* border: 1px  solid red; */
+            margin-left: -120px;
+        }
+        #navDiv2Img{
+          margin-top: 10px;
+          
+        }
+        #navDiv3{
+            display: flex;
+            justify-content: space-evenly;
+            width: 30%;
+            height: 100%;
+            /* border: 1px solid red; */
+            font-size: 14px;
+            align-items: center;
+
+        }
+   
+        #contain{
+            width: 100%;
+            height: 600px;
+            /* border: 1px solid black; */
+            margin-top: 60px;
+            display: flex;   
+        }
+        #conDiv1{
+            width: 15%;
+            /* border: 1px solid red; */
+        }
+      
+        #conDiv3{
+            width: 15%;
+            height: 600px;
+            /* border: 1px solid red; */
+        }  #conDiv2{
+            width: 70%;
+            /* height: 600px; */
+            /* border: 1px solid red; */
+        }
+        #conDiv2{
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          gap:20px;
+          margin-top: 30px;
+          
+      }
+        #conDiv2>div{
+          /* padding: 10px; */
+            /* height: 400px; */
+            border: 1px ;
+
+        }
+        #image{
+            width: 100%;
+            height: 400px;
+        }
+        #name2{
+            margin: -10px 0 -10px 0px;
+        }
+        #checDiv{
+            display: flex;
+            margin-top: 30px;
+        }
+        #check{
+           margin:15px 5PX 5px 5px;
+           width: 16px;
+           height: 16px;
+        }
+        #allCat>p{
+            margin: 8px 0 5px 10px;
+            font-size: 14px;
+        }
+        #pBold{
+            font-weight: bold;
+            margin-top: 50px;
+            margin-left: 10px;
+        }
+        select{
+            margin-left: 10px;
+         text-decoration: none;
+         margin-top: 50px;
+        }
+        #btn{
+            background-color: white;
+            border-radius: 5px;
+        }
+        
+      
+        </style>
+
+</head>
+<body>
+    <div id="nav">
+        <div id="navDiv1">
+            <div onclick="window.location.href='menswear.html'">  MENSWEAR</div>
+            <div onclick="window.location.href='Womenswear.html'"> WOMENSWEAR</div>
+            <div>EVERYTHING ELSE</div>
+            <div>SALE</div>
+            <div>SEARCH</div>
+        </div>
+        <div id="navDiv2">
+            <img id="navDiv2Img" src="https://res.cloudinary.com/ssenseweb/image/upload/v1471963917/web/ssense_logo_v2.svg">
+        </div>
+        <div id="navDiv3">
+            <div>ENGLISH  </div>
+            <div onclick="window.location.href='signup.html'">LOGIN</div>
+            <div>WISHLIST</div>
+            <div onclick="window.location.href='cart.html'">SHOPPING BAG (0)</div>
+           
+        </div>
+    </div>
+
+   <div id="contain">
+       <div id="conDiv1">
+           <div id="checDiv">
+            <input id="check" type="checkbox">
+            <P >SALES ONLY</P>
+           </div>
+           
+           
+           <p id="pBold">ALL CATEGORIES</p>
+           <div id="allCat">
+           <p>ACCESSORIES</p>
+           <p>BAG</p>
+           <p>CLOTHING</p>
+           <p>SHOES</p>
+        </div>
+
+        <p id="pBold">ALL DESIGNERS</p>
+        <div id="allCat"></div>
+       </div>
+       <div id="conDiv2"></div>
+
+       <div id="conDiv3">
+        <p id="pBold">SORT</p>
+        <div id="allCat">
+        <p>Latest arrivals</p>
+        <p>Trending</p>
+      <select onclick="sortItems()" id="sorter">
+          <option>Sort Price</option>
+          <option value="l2h">Price: Low to high</option>
+          <option value="h2l">Price: High to low</option>
+      </select>
+        
+       </div>
+
+     <select onchange="color()" id="color">
+         <option><b>Colors</b></option>
+         <option>ALL COLORS</option>
+         <option value="Black"> Black</option>
+         <option value="Blue">Blue</option>
+         <option value="Brown">Brown</option>
+         <option value="Burgundy">Burgundy</option>
+         <option value="Gray">Grey</option>
+         <option value="Green">Green</option>
+         <option value="Navy">Navy</option>
+         <option value="Orange"> Orange</option>
+         <option value="Pink">Pink</option>
+         <option value="Purple">Purple</option>
+         <option value="Red">Red</option>
+         <option value="Tan">Tan</option>
+         <option value="White">White</option>
+         <option value="Yellow">Yellow</option>
+     </select>
+   </div>
+</body>
+</html>
+
+<script>
+
+    mensWear=[
+    {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221669F052001_1/vetements-white-and-black-fitted-logo-t-shirt-dress.jpg",
+            name1:"VETEMENTS",
+            name2:"White & Black Fitted Logo T-Shirt Dress",
+            price:910,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221669F052012_1/vetements-black-and-grey-chain-open-back-dress.jpg",
+            name1:"VETEMENTS",
+            name2:"Black & Grey Chain Open Back Dress",
+            price:830,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221669F052005_1/vetements-black-and-green-code-open-back-dress.jpg",
+            name1:"VETEMENTS",
+            name2:"Black & Green Code Open Back Dress",
+            price:830,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221669F090007_1/vetements-white-and-black-monogram-miniskirt.jpg",
+            name1:"VETEMENTS",
+            name2:"Black Joy Division Edition Oversized Flower Print T-Shirt",
+            price:355,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221342F073000_1/balenciaga-grey-sport-bra.jpg",
+            name1:"ISSEY MIYAKE",
+            name2:"White & Black Monogram Miniskirt",
+            price:470,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221669F099000_1/vetements-black-and-white-zebra-turtleneck.jpg",
+            name1:"VETEMENTS",
+            name2:"Black & White Zebra Turtleneck",
+            price:780,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221528F015001_1/the-attico-black-dylan-bucket-hat.jpg",
+            name1:"ISSEY MIYAKE",
+            name2:"Black Dylan Bucket Hat",
+            price:830,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221342F016001_1/balenciaga-off-white-logo-visor-cap.jpg",
+            name1:"VETEMENTS",
+            name2:"Off-White Logo Visor Cap",
+            price:405,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221941F110008_1/pleats-please-issey-miyake-multicolor-lull-sweater.jpg",
+            name1:"BALENSIAGA",
+            name2:"Multicolor Sylvie Dress",
+            price:1050,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221528F052014_1/the-attico-white-palmer-dress.jpg",
+            name1:"BALENSIAGA",
+            name2:"White Palmer Dress",
+            price:570,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221528F052017_1/the-attico-pink-and-yellow-crochet-dress.jpg",
+            name1:"AMMY CROOKES",
+            name2:"Pink & Yellow Crochet Dress",
+            price:710,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221809F052002_1/issey-miyake-black-manta-dress.jpg",
+            name1:"ISSEY MIYAKE",
+            name2:"Black Manta Dress",
+            price:555,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221528F110003_1/the-attico-orange-bella-t-shirt.jpg",
+            name1:"BALENSIAGA",
+            name2:"Orange Bella T-Shirt",
+            price:450,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221528F110003_1/the-attico-orange-bella-t-shirt.jpg",
+            name1:"AMMY CROOKES",
+            name2:"Blue & Green Crochet T-Shirt",
+            price:570,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221528F110007_1/the-attico-yellow-draped-t-shirt.jpg",
+            name1:"BALENSIAGA",
+            name2:"Yellow Draped T-Shirt",
+            price:350,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221809F055007_1/issey-miyake-white-and-black-manta-pleats-dress.jpg",
+            name1:"THE ATTICO",
+            name2:"White Palmer Dress",
+            price:799,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221809F099021_1/issey-miyake-black-spongy-26-turtleneck.jpg",
+            name1:"THE ATTICO",
+            name2:"Black Spongy 26 Zip-Up Sweater",
+            price:635,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221528F086003_1/the-attico-white-carter-lounge-pants.jpg",
+            name1:"AMMY CROOKES",
+            name2:"White Carter Lounge Pants",
+            price:450,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221187F109011_1/alexander-wang-blue-pulled-shirt.jpg",
+            name1:"THE ATTICO",
+            name2:"Blue Pulled Dress",
+            price:485,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221187F052004_1/alexander-wang-white-pulled-dress.jpg",
+            name1:"ISSEY MIYAKE",
+            name2:"White & Black Manta Pleats Dress",
+            price:925,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221187F088006_1/alexander-wang-black-bite-shorts.jpg",
+            name1:"ISSEY MIYAKE",
+            name2:"Yellow Manta Dress",
+            price:555,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221214F110021_1/alexanderwangt-black-silk-slim-shirt.jpg",
+            name1:"AMMY CROOKES",
+            name2:"Black Fuzzy Pleats Sweater",
+            price:485,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221214F095004_1/alexanderwangt-off-white-knit-cardigan.jpg",
+            name1:"ISSEY MIYAKE",
+            name2:"White Fuzzy Pleats Sweater",
+            price:485,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221214F111017_1/alexanderwangt-pink-butterfly-camisole.jpg",
+            name1:"AMMY CROOKES",
+            name2:"Purple Shirred Stretch Turtleneck",
+            price:455,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221154F060000_1/helmut-lang-blue-crinkled-trucker-jacket.jpg",
+            name1:"ISSEY MIYAKE",
+            name2:"Blue Pulled Dress",
+            price:825,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221790F511023_1/alo-green-suspension-sports-bra.jpg",
+            name1:"AMMY CROOKES",
+            name2:"Grey Blast Trousers",
+            price:420,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221790F561022_1/alo-off-white-sierra-sport-top.jpg",
+            name1:"AMMY CROOKES",
+            name2:"Multicolor Lull Sweater",
+            price:310,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221554F088004_1/museum-of-peace-and-quiet-ssense-exclusive-green-natural-shorts.jpg",
+            name1:"THE ATTICO",
+            name2:"Green Wordmark T-Shirt",
+            price:90,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221790F111000_1/alo-off-white-peak-sport-top.jpg",
+            name1:"VETEMENTS",
+            name2:"White & Black Fitted Logo T-Shirt Dress",
+            price:910,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221386F054028_1/staud-black-and-beige-dana-dress.jpg",
+            name1:"VETEMENTS",
+            name2:"Black & Grey Chain Open Back Dress",
+            price:830,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221554F088007_1/museum-of-peace-and-quiet-ssense-exclusive-green-wordmark-sweat-shorts.jpg",
+            name1:"STAUD",
+            name2:"Black & Green Code Open Back Dress",
+            price:830,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221790F531017_1/alo-black-velour-flare-leggings.jpg",
+            name1:"VETEMENTS",
+            name2:"Black Joy Division Edition Oversized Flower Print T-Shirt",
+            price:355,
+        },
+        {
+            image:"https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,q_auto/221528F052017_1/the-attico-pink-and-yellow-crochet-dress.jpg",
+            name1:"AMMY CROOKES",
+            name2:"Pink & Yellow Crochet Dress",
+            price:710,
+        },
+
+    ]
+     
+
+    var bagArr=JSON.parse(localStorage.getItem("cartItems")) || []
+  
+    displayData(mensWear);
+  function displayData(mensWear){
+      document.querySelector("#conDiv2").innerHTML="";
+  
+       
+     mensWear.map(function(data){
+        var div=document.createElement("div")
+       
+       var image=document.createElement("img")
+       image.setAttribute("src",data.image)
+       image.setAttribute("id","image")
+
+       var name1=document.createElement("p")
+        name1.textContent=data.name1;
+        name1.setAttribute("id","name1")
+
+        var name2=document.createElement("p")
+        name2.textContent=data.name2;
+        name2.setAttribute("id","name2")
+
+        var price=document.createElement("p")
+        price.textContent=data.price;
+        price.setAttribute("id","price")
+
+        var btn=document.createElement("button")
+   btn.innerText="Add to bag";
+   btn.setAttribute("id","btn")
+
+        btn.addEventListener("click",function(){
+            addToBag(data)
+            // console.log("bigShow")
+        })
+
+        div.append(image,name1,name2,price,btn)
+        document.querySelector("#conDiv2").append(div);
+     })
+      function addToBag(data){
+          console.log(data)
+          data.Qty=1;
+          bagArr.push(data)
+           console.log(bagArr)
+
+          localStorage.setItem("cartItems",JSON.stringify(bagArr))
+         // window.location.href="bigShow.html"
+      }
+    }
+
+    function sortItems(){
+        var sorting=document.getElementById("sorter").value;
+        console.log(sorting)
+        if(sorting=='h2l'){
+            mensWear.sort(function (a,b){
+                return b.price - a.price;
+            })
+            displayData(mensWear)
+        }
+        else if(sorting=='l2h'){
+            mensWear.sort(function (a,b){
+                return a.price - b.price;
+            })
+            displayData(mensWear)
+        }
+
+    }
+
+
+
+   function color(){
+       var select=document.getElementById("color").value;
+       console.log(select)
+       var colorList=mensWear.filter(function(elem){
+           return elem.color==select;
+      });
+       console.log(colorList)
+    //    displayData(colorList)
+      
+   }
+
+ 
+    para=[{name:"032c"},
+    {name:"1017 ALYX 9SM"},
+    {name:"11 by Boris Bidjan Saberi"},
+    {name:"132 5. ISSEY MIYAKE"},
+    {name:" 3.1 Phillip Lim"},
+    {name:"3MAN"},
+    {name:"424"},
+    {name:"44 Label Group"},
+    {name:" 99% IS"},
+    {name:" A BETTER FEELING"},
+    {name:" A-COLD-WALL*"},
+    {name:"A. A. Spectrum"},
+    {name:"A.P.C."},
+    {name:"AAPE by A Bathing Ape"},
+    {name:"Acne Studios"},
+    {name:"AACRONYM"},
+    {name:"ADER error"},
+    {name:"adidas Originals"},
+    {name:"adidas x Human Made"},
+    {name:"adidas x Humanrace by Pharrell Williams"},
+    {name:"adidas x IVY PARK"},
+    {name:"Adieu"},
+    {name:"Advisory Board Crystals"},
+    {name:"ADYAR"},
+    {name:"AFFXWRKS"},
+    {name:"Agnona"},
+    {name:"Axel Arigato"},
+    {name:"Bao Bao Issey Miyake"},
+    {name:"BAPE"},
+    {name:"Barbour"},
+    {name:"Barena"},
+    {name:"Bather"},
+    {name:"BEAMS PLUS"},
+    {name:"BED J.W. FORD"},
+    {name:"Belstaff"},
+    {name:"Benjamin Edgar"},
+    {name:"Bethany Williams"},
+    {name:"Bianca Saunders"},
+    {name:"Billionaire Boys Club"},
+    {name:"Birkenstock"},
+    {name:"Blackmerle"},
+    {name:"Bleue Burnham"},
+    {name:"Boramy Viguier"},
+    
+    ]
+    para.map(function(paraData){
+        var div=document.createElement("div")
+        div.setAttribute("id","allCat")
+        var name=document.createElement("p")
+        name.textContent=paraData.name;
+         div.append(name)
+         document.querySelector("#conDiv1").append(div)
+    })
+</script>
+
+
