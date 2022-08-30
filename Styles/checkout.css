@@ -1,0 +1,88 @@
+#imgDiv{
+    width: 130px;
+    height: 80px;
+    margin: auto;
+    
+}
+#main{
+    width: 80%;
+    height: 500px;
+    /* border:1px solid black; */
+    margin:auto;
+}
+#p2{
+    margin-top: 40px;
+}
+#p1{
+    margin-top: -20px;
+}
+#container{
+    display: flex;
+    gap:40px;
+}
+#container>div{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid rgb(42, 6, 83); */
+}
+#input1{
+width: 98%;
+height: 50px;
+margin-top: -12px;
+font-size: 18px;
+}
+#input2{
+width: 40%;
+height: 50px;
+font-size: 18px;
+}
+p{
+margin-top: 25px;
+}
+#card{
+width: 70%;
+
+/* border: 1px solid black; */
+display: flex;
+gap:20px;
+}
+/* #card>div{
+border: 1px solid red;
+
+} */
+#card1{
+width: 70%;
+font-size: 20px;
+}
+#card2{
+width: 30%;
+font-size: 18px;
+}
+#cardIn{
+width: 98%;
+height: 30px;
+font-size: 18px;
+}
+#cardIn2{
+width: 98%;
+height: 30px;
+font-size: 18px;
+}
+#cardP{
+font-weight: bold;
+margin-bottom: 5px;
+}
+#payDiv{
+margin:8px 0 50px 260px;
+width: 120px;
+height: 30px;
+}
+#payBtn{
+width: 150px;
+height: 40px;
+font-size: 18px;
+background-color: black;
+color: white;
+border: 1px solid black;
+
+}
