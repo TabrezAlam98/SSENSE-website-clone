@@ -28,12 +28,12 @@ body{
 #navDiv2{
     width: 10%;
     height: 100%;
-    /* border: 1px  solid red; */
+   
     margin-left: -120px;
 }
 #navDiv2Img{
   margin-top: 10px;
-  
+  cursor: pointer;
 }
 #navDiv3{
     display: flex;

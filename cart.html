@@ -11,7 +11,19 @@
     <link rel="stylesheet" href="./Styles/cart.css">
 </head>
 <body>
-    <div id="conDiv2"></div>
+    <div id="main">
+      <div id="main1">
+
+        <div id="main1Contain">
+          <div id="imgDiv"></div>
+          <div id="nameDiv"></div>
+          <div id="priceDiv"></div>
+        </div>
+        
+      </div>
+      <div id="main2"></div>
+
+    </div>
     <h2>0</h2>
     <button id="proceed" onClick="window.location.href='checkout.html'">PROCEED TO CHECKOUT</button>
 </body>
@@ -25,10 +37,21 @@
     
 
 function displayData(items){
-    document.querySelector("#conDiv2").innerHTML="";
+    document.querySelector("#main").innerHTML;
 
  items.map(function(data,index,array){
-    var div=document.createElement("div")
+
+  document.querySelector("#main1").textContent;
+  document.querySelector("#imgDiv").textContent;
+  document.querySelector("#nameDiv").textContent;
+  document.querySelector("#priceDiv").textContent;
+  document.querySelector("#main2").textContent;
+
+    // var main1=document.createElement("div")
+    // main1.setAttribute("id","main1")
+
+    // var main2=document.createElement("div")
+    // main2.setAttribute("id","main2")
 
 var img=document.createElement("img");
 img.setAttribute("src",data.image);
@@ -69,12 +92,15 @@ btn2.addEventListener("click",function(){
   decQty(index);
 })
 
+imgDiv.append(img)
+nameDiv.append(name1,name2)
+priceDiv.append(price,btn1,btn2)
 
-
-div.append(img,name1,name2,price,btn1,btn2)
-
-
-document.querySelector("#conDiv2").append(div);
+main1Contain.append(imgDiv,nameDiv,priceDiv)
+main1.append(main1Contain)
+// main1.append(mainInner)
+ 
+document.querySelector("#main").append(main1,main2)
 
  });
 

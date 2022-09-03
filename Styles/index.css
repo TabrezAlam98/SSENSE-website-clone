@@ -5,7 +5,6 @@ body{
     width: 100%;
     margin: auto;
     height: 50px;
-    /* border:1px solid black; */
     display: flex;
     justify-content: space-between;
     color: gray;
@@ -21,36 +20,30 @@ body{
     justify-content: space-evenly;
     width: 40%;
     height: 100%;
-    /* border: 1px solid red; */
     font-size: 12px;
     align-items: center;
-    cursor: pointer;
+    
 }
 #navDiv2{
     width: 10%;
     height: 100%;
-    /* border: 1px  solid red; */
     margin-left: -120px;
 }
-/* #navDiv2Img{
-  margin-top: 10px;
+#navDiv2Img{
+   cursor: pointer;
   
-} */
+}
 #navDiv3{
     display: flex;
     justify-content: space-evenly;
     width: 30%;
     height: 100%;
-    /* border: 1px solid red; */
     font-size: 12px;
     align-items: center;
-    cursor: pointer;
 }
 
 #container1{
     width: 95%;
-    /* height: 500px; */
-    /* border: 1px solid red; */
     margin: auto;
     margin-top: 15px;
     display: flex;
@@ -59,20 +52,14 @@ body{
 }
 #container1>div{
     width: 48%;
-   
-    /* border: 1px solid black; */
-   
-      
+    
 }
 #imgDiv{
     width: 100%;
     height: 450px;
-    /* border: 1px solid red; */
 }
 #innerDiv{
     width: 100%;
-    /* height: 20px; */
-    /* border: 1px solid green; */
     display: flex;
     align-items: center;
     gap: 20px;
