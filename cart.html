@@ -11,191 +11,92 @@
     <link rel="stylesheet" href="./Styles/cart.css">
 </head>
 <body>
+  <div id="mainContainer">
     <div id="main">
-      <div id="main1">
-
-        <div id="main1Contain">
-          <div id="imgDiv"></div>
-          <div id="nameDiv"></div>
-          <div id="priceDiv"></div>
-        </div>
-        
-      </div>
-      <div id="main2"></div>
-
     </div>
-    <h2>0</h2>
-    <button id="proceed" onClick="window.location.href='checkout.html'">PROCEED TO CHECKOUT</button>
+    <div id="total">
+      <h1>0</h1>
+      <button id="proceed" onClick="window.location.href='checkout.html'">PROCEED TO CHECKOUT</button>
+    </div>
+  </div>
+ 
 </body>
 </html>
 
 
-
-<script>
-    var cartArr=JSON.parse(localStorage.getItem("cartItems")) || []
-
-    
-
-function displayData(items){
+ <script>
+  let cartArr=JSON.parse(localStorage.getItem("cartItems"))
+  function displayData(items){
     document.querySelector("#main").innerHTML;
-
- items.map(function(data,index,array){
-
-  document.querySelector("#main1").textContent;
-  document.querySelector("#imgDiv").textContent;
-  document.querySelector("#nameDiv").textContent;
-  document.querySelector("#priceDiv").textContent;
-  document.querySelector("#main2").textContent;
-
-    // var main1=document.createElement("div")
-    // main1.setAttribute("id","main1")
-
-    // var main2=document.createElement("div")
-    // main2.setAttribute("id","main2")
-
-var img=document.createElement("img");
-img.setAttribute("src",data.image);
-img.setAttribute("id","image")
-
-
-
-
-var name1=document.createElement("p");
-name1.textContent=data.name1;
-name1.setAttribute("id","name1")
-
-var name2=document.createElement("p");
-name2.textContent=data.name2;
-name2.setAttribute("id","name2")
-
-
-
-var price=document.createElement("p")
-price.textContent=data.price+" - "+data.Qty;
-
-
-
-var btn1=document.createElement("button")
-btn1.textContent="Add + 1";
-btn1.setAttribute("id","btn")
-
-btn1.addEventListener("click",function(){
-  incQty(index);
-})
-
-
-var btn2=document.createElement("button")
-btn2.textContent="Add - 1";
-btn2.setAttribute("id","btn1")
-
-btn2.addEventListener("click",function(){
-  decQty(index);
-})
-
-imgDiv.append(img)
-nameDiv.append(name1,name2)
-priceDiv.append(price,btn1,btn2)
-
-main1Contain.append(imgDiv,nameDiv,priceDiv)
-main1.append(main1Contain)
-// main1.append(mainInner)
- 
-document.querySelector("#main").append(main1,main2)
-
- });
-
-}
-
-
-function showTotal(){
-  var total=cartArr.reduce(function(acc,elem){
-    return acc+(elem.price*elem.Qty);
-},0)
-// console.log(total)
-document.querySelector("h2").textContent=total;
-}
-
-displayData(cartArr)
-showTotal()
-
-function incQty(index){
-  cartArr[index].Qty++;
-  localStorage.setItem("cartItems",JSON.stringify(cartArr));
-  displayData(cartArr);
-  showTotal()
-}
-
-
-function decQty(index){
-  cartArr[index].Qty--;
-  localStorage.setItem("cartItems",JSON.stringify(cartArr));
-  displayData(cartArr);
-  showTotal()
-}
-</script>
-
-<!-- <script>
-
-    
-var bagArr=JSON.parse(localStorage.getItem("cartItems")) || []
-
-    
-  function displayData(item){
-      document.querySelector("#conDiv2").innerHTML="";
-  
-       
-      item.map(function(data,index,array){
-        var div=document.createElement("div")
-       
-       var image=document.createElement("img")
-       image.setAttribute("src",data.image)
-       image.setAttribute("id","image")
-
-       var name1=document.createElement("p")
-        name1.textContent=data.name1;
-        name1.setAttribute("id","name1")
-
-        var name2=document.createElement("p")
-        name2.textContent=data.name2;
-        name2.setAttribute("id","name2")
-
-        var price=document.createElement("p")
-        price.textContent=data.price+" - "+data.Qty;
-        price.setAttribute("id","price")
-
-        
-       
-
-        div.append(image,name1,name2,price)
-        document.querySelector("#conDiv2").append(div);
-     })
+    items.map(function(data,index,array){
      
-    }
+     
+      let contain=document.createElement("div");
+      contain.setAttribute("id","contain")
 
-    function showTotal(){
-  var total=bagArr.reduce(function(acc,elem){
-    return acc+(elem.price*elem.Qty);
-},0)
-console.log(total);
-document.querySelector("h2").innerText=total;
-}
-    displayData(bagArr)
-showTotal()
+      let imgDiv=document.createElement("div");
+      imgDiv.setAttribute("id","imgDiv");
+
+      let descDiv=document.createElement("div");
+      descDiv.setAttribute("id","descDiv");
+
+      let img=document.createElement("img");
+      img.setAttribute("src",data.image)
+      img.setAttribute("id","image")
+
+      let name1=document.createElement("p");
+      name1.textContent=data.name1;
+      name1.setAttribute("id","name1")
+
+      let name2=document.createElement("p");
+      name2.textContent=data.name2;
+      name2.setAttribute("id","name2")
+
+      let price=document.createElement("p");
+      price.textContent="₹"+data.price+" - "+data.Qty;
+
+      let btn1=document.createElement("button");
+      btn1.textContent="Add + 1"
+      btn1.addEventListener("click",function(){
+        incQty(index)
+      })
+
+      let btn2=document.createElement("button");
+      btn2.textContent="Add - 1"
+      btn2.addEventListener("click",function(){
+        decQty(index)
+      })
+
+      imgDiv.append(img);
+      descDiv.append(name1,name2,price,btn1,btn2)
+      contain.append(imgDiv,descDiv);
+
+      document.querySelector("#main").append(contain)
+    })
+
+  }
+  function showTotal(){
+   let total = cartArr.reduce(function(acc,elem){
+    return acc+(elem.price * elem.Qty)
+   },0) 
+   console.log(total)
+  document.querySelector("h1").textContent=total;
+  }
+   displayData(cartArr)
+  showTotal()
  
 
- 
-function incQty(index){
-  cartArr[index].Qty++;
-  localStorage.setItem("cartItems",JSON.stringify(cartArr));
-  displayData(cartArr);
-  showTotal()
-}
+  function incQty(index){
+    cartArr[index].Qty++;
+    localStorage.setItem("cartItems",JSON.stringify(cartArr))
+    displayData(cartArr)
+    showTotal()
+  }
 
-
-function decQty(index){
-  cartArr[index].Qty--;
-  localStorage.setItem("cartItems",JSON.stringify(cartArr));
-  displayData(cartArr);
-  showTotal()
-}
-</script> -->
+  function decQty(index){
+    cartArr[index].Qty--;
+    localStorage.setItem("cartItems",JSON.stringify(cartArr));
+    displayData(cartArr)
+    showTotal()
+  }
+</script> 

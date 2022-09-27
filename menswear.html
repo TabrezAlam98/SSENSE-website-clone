@@ -28,6 +28,7 @@
             <div style="cursor:pointer" onclick="window.location.href='signup.html'">LOGIN</div>
             <div style="cursor:pointer">WISHLIST</div>
             <div style="cursor:pointer" onclick="window.location.href='cart.html'">SHOPPING BAG (0)</div>
+ 
            
         </div>
     </div>
@@ -327,7 +328,7 @@
           console.log(data)
           data.Qty=1;
           bagArr.push(data)
-           console.log(bagArr)
+          console.log(bagArr)
 
           localStorage.setItem("cartItems",JSON.stringify(bagArr))
          // window.location.href="bigShow.html"
